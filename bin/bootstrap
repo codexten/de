@@ -8,3 +8,26 @@ deDir="$HOME/.de"
 ############
 
 runtimeDir="$deDir/runtime"
+versionFile="$runtimeDir/version"
+versionDir="$deDir/versions"
+
+# functions
+###########
+
+get_current_version()
+{
+  if [ -f  $versionFile ]
+  then
+    typeset -i version
+    version=$(<$versionFile)
+    ((sum=version+1))
+    return $version
+  fi
+
+  return 1
+}
+
+set_current_version()
+{
+  echo $1 > $versionFile
+}

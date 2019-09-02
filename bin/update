@@ -4,4 +4,12 @@
 cd $deDir
 git pull
 
-. ./bin/versions/de-1.0.0.sh
+get_current_version
+currentVersion=$?
+
+# continue until $n equals 5
+while [ $n -le currentVersion ]
+do
+	echo "Welcome $n times."
+	n=$(( n+1 ))	 # increments $n
+done
