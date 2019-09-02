@@ -5,5 +5,7 @@ mkdir ~/.codexten/bin
 
 set_env 'PATH' '$HOME/.codexten/bin:$PATH'
 
-ln -s ~/.de/bin/de ~/.codexten/bin/de
-ln -s ~/.de/bin/de ~/.codexten/bin/dev
+set_global_executable $HOME/.de/bin/de de
+set_global_executable $HOME//.de/bin/de dev
+
+create_symlink $HOME/.profile $HOME/Desktop/profile.txt

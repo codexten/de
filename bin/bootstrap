@@ -37,3 +37,17 @@ set_env()
   exportString="export $1=$2"
   echo $exportString >> ~/.profile
 }
+
+create_symlink()
+{
+  echo "creating symlink $2 => $1"
+  ln -sf $1 $2
+}
+
+set_global_executable()
+{
+  target="$HOME/.codexten/bin/$2"
+  create_symlink $1 $target
+  chmod +x $target
+  source $HOME/.profile
+}
