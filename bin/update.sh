@@ -1,17 +1,17 @@
 
 # Setting Enviornment Variables
 ################################
-export DE_DIR="$HOME/.de"
+deDir="$HOME/.de"
 
 # variables
 ############
 
-runtimeDir="$DE_DIR/runtime"
+runtimeDir="$deDir/runtime"
 
 # Crontab to pull repo in every 1 hour
 ########################################
 
-croncmd="echo test >> $runtimeDir/cron.log 2>&1"
+croncmd="echo cd $deDir && git pull  >> $runtimeDir/cron.log 2>&1"
 cronjob="* * * * * $croncmd"
 
 ( crontab -l | grep -v -F "$croncmd" ) | crontab -
