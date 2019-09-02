@@ -1,2 +1,12 @@
 #!/usr/bin/env sh
-echo "Hai"
+. ./bin/bootstrap
+command=$1
+
+case $command in
+   "update")
+      $deDir/bin/update
+      ;;
+   *)
+     echo "Invalid Command"
+     ;;
+esac
