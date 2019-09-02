@@ -1,3 +1,5 @@
 #!/usr/bin/env sh
 
 #ln -s ~/.profile ~/Desktop/profile.txt
+
+sudo ln -s $deDir/bin/de /usr/bin/de
