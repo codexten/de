@@ -7,7 +7,7 @@ chmod +x ~/.de/bin/install
 chmod +x ~/.de/bin/de
 chmod +x ~/.de/bin/update
 
-. bootstrap
+. ./bin/bootstrap
 
 # Crontab to pull repo in every 1 hour
 ########################################
