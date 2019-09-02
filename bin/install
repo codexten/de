@@ -12,7 +12,7 @@ chmod +x ~/.de/bin/update
 # Crontab to pull repo in every 1 hour
 ########################################
 
-croncmd="echo cd $deDir &&  $deDir/bin/update >> $runtimeDir/cron.log 2>&1"
+croncmd="echo cd $deDir && ./bin/update >> $runtimeDir/cron.log 2>&1"
 cronjob="* * * * * $croncmd"
 
 ( crontab -l | grep -v -F "$croncmd" ) | crontab -
