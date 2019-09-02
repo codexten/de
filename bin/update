@@ -3,3 +3,5 @@
 
 cd $deDir
 git pull
+
+. ./bin/versions/de-1.0.0.sh
