@@ -1,22 +1,2 @@
 #!/usr/bin/env sh
 . ./bin/bootstrap
-
-targetVersion=3
-
-get_current_version
-currentVersion=$?
-currentVersion=$(( currentVersion+1 ))
-
-while [ $currentVersion -le $targetVersion ]
-do
-	echo "Version $currentVersion updates"
-	versionExecute="$versionDir/de-$currentVersion.sh"
-	echo $versionExecute
-    if [ -f  $versionExecute ]
-      then
-        echo "Found"
-    fi
-    echo "Version $currentVersion updates Completed"
-#    set_current_version $currentVersion
-    currentVersion=$(( currentVersion+1 ))
-done

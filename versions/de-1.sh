@@ -1,1 +1,0 @@
-echo "Vwersion 1"
