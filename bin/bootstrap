@@ -31,3 +31,9 @@ set_current_version()
 {
   echo $1 > $versionFile
 }
+
+set_env()
+{
+  exportString="export $1=$2"
+  echo $exportString >> ~/.profile
+}
