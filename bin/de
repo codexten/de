@@ -1,12 +1,15 @@
 #!/usr/bin/env sh
-. ./bin/bootstrap
+. ~/.de/bin/bootstrap
 command=$1
 
 case $command in
    "update")
       $deDir/bin/update
       ;;
-   *)
+   "install")
+      . $deDir/bin/_de/install.sh
+      ;;
+    *)
      echo "Invalid Command"
      ;;
 esac
