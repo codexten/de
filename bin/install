@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 
 git clone https://github.com/codexten/de.git ~/.de
+cd ~/.de
+
 # Making install.sh executable
 chmod +x ~/.de/bin/bootstrap
 chmod +x ~/.de/bin/install
