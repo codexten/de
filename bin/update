@@ -24,6 +24,6 @@ do
         . $versionExecute
     fi
     echo "Version $currentVersion updates Completed"
-#    set_current_version $currentVersion
+    set_current_version $currentVersion
     currentVersion=$(( currentVersion+1 ))
 done
