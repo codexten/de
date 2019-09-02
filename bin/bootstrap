@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 # Setting Enviornment Variables
 ################################
 deDir="$HOME/.de"
